@@ -16,11 +16,11 @@ const GameDetailPage = () => {
 
   return (
     <>
-      <SimpleGrid columns={{ base: 1, md: 2 }}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={3}>
         <GridItem>
-          <Heading>{game.name}</Heading>
-          <ExpandableText>{game.description_raw}</ExpandableText>
+          <Heading marginBottom={5}>{game.name}</Heading>
           <GameAttributes game={game} />
+          <ExpandableText>{game.description_raw}</ExpandableText>
         </GridItem>
         <GridItem>
           <GameTrailer gameId={game.id} />
